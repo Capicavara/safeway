@@ -1,0 +1,135 @@
+#round {
+  border-radius: 25px;
+  background:white;
+  padding: 20px;
+  width: 200px;
+  height: 150px; 
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-45%);
+  -ms-transform: translateX(45%);
+  transform: translateY(-45%);
+  transform: translateX(45%);
+  border: 1px solid gray; 
+}
+
+.container { 
+  text-align: center;
+  height: 200px;
+  position: relative;
+  border: 3px solid green; 
+}
+
+
+
+
+#map_canvas {
+    width: 90%;
+    height: 80%;
+    border: 1px solid red;
+  }
+   
+   
+  #address {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+   
+  #map {
+    width: 100%;
+    height: 100vh;
+    border: 0px; border-radius: 2%; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;
+  }
+
+    #pop {
+    width: 100%;
+    height: 100vh;
+    border: 0px; border-radius: 2%; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;
+  }
+
+  #up{
+    width: 100%;
+    height: 100vh;
+  }
+   
+  .map-wrapper {
+    position: relative;
+   
+    #map_center {
+      position: absolute;
+      z-index: 99;
+      height: 40px;
+      width: 40px;
+      top: 50%;
+      left: 50%;
+      margin-left: -21px;
+      margin-top: -41px;
+    }
+  
+
+  }
+
+    .up {
+      position: absolute;
+      z-index: 99;
+      height: 240px;
+      width: 240px;
+      top: 40%;
+      left: 20%;
+      margin-left: -21px;
+      margin-top: -41px;
+  }
+
+      .botoes {
+      position: absolute;
+      z-index: 99;
+      height: 240px;
+      width: 240px;
+      top: 59%;
+      left: 20%;
+      margin-left: -21px;
+      margin-top: -41px;
+  }
+
+        .fab-botoes {
+      position: absolute;
+      z-index: 99;
+      height: 340px;
+      width: 340px;
+      top: 90%;
+      left: 3%;
+      margin-left: -21px;
+      margin-top: -41px;
+  }
+
+.socorro {
+  background-color: rgba(255,0,0,0.4);
+  position: absolute;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+}
+
+.help{
+  position: absolute;
+  z-index: 99;
+  height: 500px;
+  width: 500px;
+  top: 25%;
+  left: 9%;
+  margin-left: -21px;
+  margin-top: -41px;
+}
+
+.destino{
+  position: absolute;
+  z-index: 98;
+  height: 200px;
+  width: 200px;
+  top: -600%;
+  left: -150%;
+  margin-left: -21px;
+  margin-top: -41px;
+}

@@ -1,0 +1,28 @@
+
+.meio {
+    position: absolute;
+    z-index: 99;
+    height: 300px;
+    width: 300px;
+    top: 0%;
+    left: 19%;
+    margin-left: -21px;
+    margin-top: -41px;
+}
+#envelope{
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    top: 42%;
+    left: 48%;
+    margin-left: 18px;
+    margin-top: -10px;
+}
+  
+.fundo{
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}

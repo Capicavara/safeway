@@ -1,0 +1,59 @@
+
+<ion-content>
+  <div class="login-clean" style="background-color: #fcc5c2;">
+    <div class="fundo" *ngIf="fundo == true"></div>
+    <form method="post" style="height: 2000px;margin-top: 0;">
+        <div class="illustration"
+            style="background-color: #FF938E;width: 133%;margin-left: -16.5%;margin-top: -17%;height: 10%;border-top-left-radius: 3%;border-top-right-radius: 3%;border-bottom-left-radius: 10%;border-bottom-right-radius: 10%;">
+
+        </div>
+        <div style="margin-top: -44%;margin-left: 32%;">
+            <h1 style="color: #ffffff;font-family: 'Bubbler One', sans-serif;font-size: 20px;">
+                <strong>Minha Conta</strong></h1>
+        </div>
+        <div style="margin-left: 30%;">
+            <img src="assets/img/profilepic.png" width="60%" height="60%">
+        </div>
+        <div text-center style="margin-top: 5%">
+            <label style="color: #777; font-size: 20px;">Laura Andrade</label>
+        </div>
+        <div style="margin-top: 10%; margin-left:30.5%;">
+            <button text-center type="button" class="btn btn-default" style="border: 1px solid #EBEBEB"><label
+                    style="font-weight: bold; color:#777;">Alterar dados</label></button>
+        </div>
+
+        <div style="background-color: #FF938E;height: 2%;width: 90%;margin-left: 5%;margin-top: 22%;"></div>
+        <div style="background-color: #EBEBEB;height: 2.5%;width: 14%;border-radius: 100%;margin-top: -14%;"></div>
+        <div
+            style="background-color: #EBEBEB;height: 2.5%;width: 14%;border-radius: 100%;margin-top: -16%;margin-left: 86%;">
+            <button id="envelope" class="btn" name="convite"><img src="assets/img/icones/envelope.png" width="25px" height="20px"></button>
+        </div>
+
+        <div class="seta" text-center style="height: 35%;width: 95%;margin-left: 30%;">
+            <div style="  
+                width: 0; 
+                height: 0; 
+                border-left: 25px solid transparent;
+                border-right: 25px solid transparent;
+                border-bottom: 25px solid #EBEBEB;
+                border-radius: 7%;"></div>
+
+            <div
+                style="background-color: #EBEBEB; text-align: center;width: 30%;height: 19%; border-radius: 7%;margin-top:-1%;margin-left: -4%;">
+                <div style="height: 20%;"></div>
+                <label>876 pts</label>
+                <img src="assets/img/icones/money.png" width="50%" height="35%"
+                    style="margin-top: 10%;margin-left: -3%;">
+            </div>
+        </div>
+            <div *ngIf="fundo == true" class="meio">
+                <img (click)="popup(false)" src="assets/svg/invite.svg">
+            </div>
+
+        <div style="margin-top: -160%; margin-left:-5%;">
+            <button (click)="popup(true)" class="btn" name="convite"><img src="assets/img/icones/convite.png" width="40%"
+                    height="40%"></button>
+        </div>
+    </form>
+</div>
+</ion-content>

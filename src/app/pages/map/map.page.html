@@ -1,0 +1,99 @@
+
+<!-- 
+<form [formGroup]="directionForm" (ngSubmit)="calculateAndDisplayRoute(directionForm.value)">
+
+  <ion-item>
+
+    <ion-label position="floating">Inicio</ion-label>
+
+    <ion-input formControlName="source"></ion-input>
+
+  </ion-item>
+
+  <ion-item>
+
+    <ion-label position="floating">Destino</ion-label>
+
+    <ion-input formControlName="destination"></ion-input>
+
+  </ion-item>
+
+  <ion-button expand="full" type="submit" [disabled]="directionForm.invalid">Get Direction</ion-button>
+
+</form> -->
+
+<ion-content>
+
+
+  <div class="login-clean" style="background-color: #fcc5c2;">
+    <div *ngIf="pop_socorro == true" class="socorro">
+    </div>
+    <form method="post" style="height: 600px;margin-top: 0;">
+
+      <div class="illustration"
+      style="background-color: #FF938E;width: 133%;margin-left: -16.5%;margin-top: -17%;height: 20%;border-top-left-radius: 3%;border-top-right-radius: 3%;border-bottom-left-radius: 4%;border-bottom-right-radius: 4%;">
+
+    </div>
+    <div style="margin-top: -44%;margin-left: 35%;">
+      <h1 style="color: #ffffff;font-family: 'Bubbler One', sans-serif;font-size: 20px;">
+        <strong>SafeWay</strong></h1>
+      </div>
+
+      <div>
+        <div class="map-wrapper">
+          <div id="map_center">
+            <img *ngIf="popup != true && pop_socorro != true" src="assets/icon/center_marker.png" />
+            <ion-item class="destino">
+              <ion-input value="" text-center placeholder="Destino" name="destino" [(ngModel)]="destino" (keyup.enter)="calculateAndDisplayRoute( $event.target.value )"></ion-input>
+            </ion-item>
+            
+          </div>
+          <div id="pop" *ngIf="popup == true" style="position: absolute;background-color: white; background: rgba(0,0,0,0.4); z-index: 2;"> 
+            <div class="up" *ngIf="popup == true">
+              <a (click)="menu(false)"><img src="assets/svg/popup.svg"></a>
+            </div>
+            <ion-grid class="botoes" text-center>
+              <ion-row >
+                <ion-col>
+                  <a (click)="adicionar('Local seguro', 'seguro?')"><img style="width: 80px; height: 80px" src="assets/svg/classificar-seguro.svg"></a>
+                </ion-col>
+                <ion-col>
+                  <a (click)="adicionar('Local inseguro', 'inseguro?')"><img style="width: 80px; height: 80px" src="assets/svg/classificar-perigo.svg"></a>
+                </ion-col>
+
+              </ion-row>
+            </ion-grid>
+          </div>
+          <div style="z-index: 1;" #map id="map"></div>
+          <ion-grid class="fab-botoes" text-center>
+            <ion-row >
+              <ion-col>
+                <a (click)="menu(true)"><img style="width: 80px; height: 80px" src="assets/svg/botao-classificar.svg"></a>
+              </ion-col>
+              <ion-col>
+                <a (click)="socorro(true)"><img style="width: 80px; height: 80px" src="assets/svg/botao-socorro.svg"></a>
+              </ion-col>
+                            <ion-col>
+                <a (click)="navegar('perfil')"><img style="width: 80px; height: 80px" src="assets/svg/botao-perfil.svg"></a>
+              </ion-col>
+
+            </ion-row>
+          </ion-grid>
+          
+            <img *ngIf="pop_socorro == true" class="help" src="assets/svg/help.svg">
+        </div>
+      </div>
+
+    </form>
+  </div>
+  
+</ion-content>
+
+<!--
+<ion-fab style="padding-bottom: 35px;" vertical="bottom" horizontal="start" edge slot="fixed">
+  <ion-fab-button (click)="menu(true)" color="success"><img src="assets/svg/classificar-seguro.svg"></ion-fab-button>
+</ion-fab>
+<ion-fab style="padding-bottom: 35px;" vertical="bottom" horizontal="end" edge slot="fixed">
+  <ion-fab-button (click)="adicionar('Local inseguro', 'inseguro?')" color="danger"><ion-icon name="close"></ion-icon></ion-fab-button>
+</ion-fab>
+-->

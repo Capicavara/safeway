@@ -1,0 +1,7 @@
+{
+  "name": "Pi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
